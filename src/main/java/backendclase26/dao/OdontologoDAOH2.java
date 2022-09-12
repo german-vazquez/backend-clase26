@@ -16,7 +16,7 @@ public class OdontologoDAOH2 implements IDao<Odontologo> {
         Connection connection=null;
         try {
             connection = BD.getConnection();
-            PreparedStatement ps= connection.prepareStatement("inset into odontologos (apellido, nombre, matricula) values (?,?,?)", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps= connection.prepareStatement("insert into odontologos (apellido, nombre, matricula) values (?,?,?)", Statement.RETURN_GENERATED_KEYS);
             ps.setString(1,odontologo.getApellido());
             ps.setString(2, odontologo.getNombre());
             ps.setString(3, odontologo.getMatricula());

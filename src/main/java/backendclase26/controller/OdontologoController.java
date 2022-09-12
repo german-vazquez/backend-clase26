@@ -22,4 +22,8 @@ public class OdontologoController {
     public List<Odontologo> listarTodos(){
         return odontologoService.listarTodos();
     }
+    @GetMapping("/{id}")
+    public Odontologo buscarOdontologo(@PathVariable Integer id){
+        return odontologoService.buscarXId(id);
+    }
 }
